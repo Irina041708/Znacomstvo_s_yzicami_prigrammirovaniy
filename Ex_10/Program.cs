@@ -1,31 +1,30 @@
-﻿Console.WriteLine("Ведите первое число");
-string? A = ReadLine();
-double a;
-if (double.TryParse(A, out a))
-    {
-      // Преобразовать A в а  
-    }
-else
-    {
-        Console.WriteLine("Ошибка ввода");
-    }
+﻿
+Console.WriteLine("Ведите первое число");
+string A = Console.ReadLine()??"";
+int a;
 Console.WriteLine("Ведите второе число");
-string? B = ReadLine();
-double b;
-if (double.TryParse(B, out b))
+string B = Console.ReadLine()??"";
+int b;
+if ((int.TryParse(A, out a)) & (int.TryParse(B, out b)))
     {
-       // Преобразовать B в b  
-    }
-else
-    {
-        Console.WriteLine("Ошибка ввода");
-    }
-if (a == b*b) 
-    {
-    Console.WriteLine("Первое число является квадратом второго числа");  
+        if (a == b*b) 
+            {
+                Console.Write(a); 
+                Console.Write(" являетя квадратом ");  
+                Console.WriteLine(b); 
+            }
+    
+        else 
+            {
+                Console.Write(a); 
+                Console.Write(" не являетя квадратом ");  
+                Console.WriteLine(b);
+            }
     }
 else 
     {
-    Console.WriteLine("Первое число не является квадратом второго числа");  
+    Console.Write(a); 
+    Console.Write("не являетя квадратом ");  
+    Console.WriteLine(b);
     }
-
+    
