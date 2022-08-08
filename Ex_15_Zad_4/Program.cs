@@ -3,16 +3,21 @@
 Console.WriteLine("Ведите число");
 string N = Console.ReadLine()??"";
 int n;
-int i = 0;
+int i = 1;
 
 
 if ((int.TryParse(N, out n)))
 
     {   while ( i <= n) 
+                
             {
-                Console.WriteLine( i ); 
-                         
-             i += 2; 
+            if(  i % 2 == 0)
+                {
+                    Console.Write(i); 
+                    Console.WriteLine(" - является четным "); 
+                }
+                
+            i ++; 
             }
           
     }
